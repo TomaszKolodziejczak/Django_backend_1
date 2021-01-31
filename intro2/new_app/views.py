@@ -12,22 +12,22 @@ def helloB(request):
 
 
 def bartek(request):
-    return HttpResponse('Witaj, Bartek')
+    return HttpResponse('Hi, Bartek')
 
 
 def ewa(request):
-    return HttpResponse('Witaj, Ewa')
+    return HttpResponse('Hi, Ewa')
 
 
 def display_name(request, name, age):
     a_list = [item for item in name]
     shuffle(a_list)
     shuffled_name = ''.join(a_list)
-    return HttpResponse(f'Witaj, {shuffled_name.title()}! lat {age}')
+    return HttpResponse(f'Hello, {shuffled_name.title()}! Age {age}')
 
 
 def display_name2(request, name):
-    my = 'Pozdrawiam!!'
+    my = 'Regards!!!'
     return render(
               request,
               'new_app/name.html',
