@@ -1,0 +1,9 @@
+{% extends "inheritance/base.html" %}
+
+{% block title %}First{% endblock %}
+
+{% block body %}
+    <h3>First Inheritance</h3>
+    <br>
+    Go to <a href="{% url 'inheritance:second' %}"</a> second page!
+{% endblock %}
