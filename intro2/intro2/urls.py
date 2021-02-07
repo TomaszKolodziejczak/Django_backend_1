@@ -30,4 +30,6 @@ urlpatterns = [
     path('links/', include('links.urls')),
     path('inheritance/', include('inheritance.urls')),
     path('form-app/', include('form_app.urls')),
+    path('form-app2/', include('form_app2.urls')),
+    path('form-app4/', include('form_app_CRUD.urls')),
 ]
