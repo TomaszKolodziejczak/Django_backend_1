@@ -1,2 +1,2 @@
 # Django_backend_1
-# Examples of inheriance, links, forms in Django
+# Examples of CRUD, inheriance, links, forms in Django
