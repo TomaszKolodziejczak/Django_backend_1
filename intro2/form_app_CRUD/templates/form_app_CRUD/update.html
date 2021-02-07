@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update</title>
+</head>
+<body>
+    <h3>Update task no. {{ task.id }} to:</h3>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="task" value="{{ task }}">
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>

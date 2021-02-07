@@ -2,9 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Register</title>
+    <title>Add task</title>
 </head>
 <body>
-    OK
+Add new task:
+    <form method="POST" action="{% url 'form_app_CRUD:task_list' %}">
+          {% csrf_token %}
+    <input type="text" name="task">
+    <input type="submit" value="Add">
 </body>
 </html>
