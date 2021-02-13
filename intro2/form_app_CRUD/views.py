@@ -2,6 +2,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import render, get_object_or_404, redirect
 from form_app_CRUD.models import Task
 from django.shortcuts import Http404
+from django.views.decorators.http import require_http_methods
 
 
 # Create your views here.
@@ -66,3 +67,16 @@ def update(request, task_id):
         #     context={"tasks": tasks}
         # )
         return redirect("form_app_CRUD:task_list")
+
+
+@require_http_methods(["POST"])
+def delete(request, task_id):
+
+    task = get_object_or_404(Task, id=task_id)
+    task.delete()
+
+    # return render(
+    #     request,
+    #     'form_app_CRUD/delete.html',
+    # )
+    return redirect("form_app_CRUD:task_list")
